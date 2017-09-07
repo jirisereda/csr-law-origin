@@ -36,35 +36,4 @@
 
     </LinearLayout>
 
-    <com.github.clans.fab.FloatingActionMenu
-        xmlns:fab="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/add_floating_action_menu"
-        style="@style/FloatingActionMenu.CallFilter"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        fab:menu_backgroundColor="@color/bg_window_overlay"
-        fab:menu_labels_colorNormal="@android:color/transparent"
-        fab:menu_labels_colorPressed="@android:color/transparent"
-        fab:menu_labels_colorRipple="@android:color/transparent"
-        fab:menu_labels_cornerRadius="0dp"
-        fab:menu_labels_showShadow="false">
-
-        <!--<com.github.clans.fab.FloatingActionButton-->
-        <!--android:id="@+id/add_location"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:src="@mipmap/ic_add_white_24dp"-->
-        <!--fab:fab_label="@string/add_location" />-->
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/add_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_add_white_24dp"
-            fab:fab_label="@string/add_item"/>
-
-    </com.github.clans.fab.FloatingActionMenu>
-
-
 </android.support.design.widget.CoordinatorLayout>

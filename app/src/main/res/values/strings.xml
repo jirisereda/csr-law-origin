@@ -1,4 +1,28 @@
 <resources>
     <string name="app_name">CSR Law Origin</string>
     <string name="action_settings">Settings</string>
+    <string name="choose_action">Choose action</string>
+    <string name="add_location">Add location</string>
+    <string name="add_item">Pridej heslo</string>
+    <string name="entity_header">vytvor heslo</string>
+    <string name="heslo">heslo</string>
+    <string name="popisek">popis hesla</string>
+    <string name="menu_save">save</string>
+    <string name="location">location</string>
+    <string name="add_linked_item">pridej souvisejici heslo</string>
+
+
+    <!-- Contents of the alert dialog when the user hits the Cancel button in the editor [CHAR LIMIT=128] -->
+    <string name="cancel_confirmation_dialog_message">Discard changes?</string>
+
+    <!-- Positive button text for the cancel editing confirmation dialog.
+      Pushing this button indicates that the user wishes to discard the changes they have already
+      made and close the editor. [CHAR LIMIT=20] -->
+    <string name="cancel_confirmation_dialog_cancel_editing_button">Discard</string>
+
+    <!-- Negative button text for the cancel editing confirmation dialog.
+      Pushing this button indicates that the user wishes to continue editing
+      and return to the editor [CHAR LIMIT=30] -->
+    <string name="cancel_confirmation_dialog_keep_editing_button">Cancel</string>
+
 </resources>
