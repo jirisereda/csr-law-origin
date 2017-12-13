@@ -20,6 +20,11 @@ import android.os.AsyncTask;
 
 import cz.cas.ilaw.csrlaworigin.db.AppDatabase;
 import cz.cas.ilaw.csrlaworigin.db.RecordTopic;
+import cz.cas.ilaw.csrlaworigin.db.User;
+import cz.cas.ilaw.csrlaworigin.topicsscreen.Ticket;
+import cz.cas.ilaw.csrlaworigin.topicsscreen.UserResponse;
+import java.util.List;
+import retrofit2.Response;
 
 public class DatabaseInitializer {
 
@@ -35,24 +40,47 @@ public class DatabaseInitializer {
         task.execute();
     }
 
-    private static void addRecordTopic(final AppDatabase db, final String title, final String description) {
-        RecordTopic recordTopic = new RecordTopic();
-        recordTopic.setTitle(title);
-        recordTopic.setDescription(description);
-        db.recordTopicModel().insertRecordTopic(recordTopic);
-    }
+    //private static void addRecordTopic(final AppDatabase db, final String title, final String description) {
+    //    RecordTopic recordTopic = new RecordTopic();
+    //    recordTopic.setTitle(title);
+    //    recordTopic.setDescription(description);
+    //    db.recordTopicModel().insertRecordTopic(recordTopic);
+    //}
+    //
+    //private static void addRecordTopic(final AppDatabase db, final RecordTopic recordTopic) {
+    //    db.recordTopicModel().insertRecordTopic(recordTopic);
+    //}
+    //
+    //private static void populateWithTestData(AppDatabase db) {
+    //    db.recordTopicModel().deleteAll();
+    //
+    //    addRecordTopic(db, "Heslo 1", "Popis heslo 1");
+    //    addRecordTopic(db, "Heslo 2", "Popis heslo 2");
+    //    addRecordTopic(db, "Heslo 3", "Popis heslo 3");
+    //}
+    //
+    //public static User addUser(final AppDatabase db, final String name) {
+    //    User user = new User();
+    //    user.name = name;
+    //    db.userModel().save(user);
+    //    //db.userModel().hashCode();
+    //    return user;
+    //}
+    //
+    //
+    //public static void addTicket(final AppDatabase db, UserResponse userResponse) {
+    //    User user = new User();
+    //    user.name = userResponse.getName();
+    //    db.userModel().save(user);
+    //}
 
-    private static void addRecordTopic(final AppDatabase db, final RecordTopic recordTopic) {
-        db.recordTopicModel().insertRecordTopic(recordTopic);
-    }
+    //public static void addTickets(final AppDatabase db, List<UserResponse> listResponse) {
+    //
+    //    for (UserResponse response: listResponse) {
+    //        addTicket(db, response);
+    //    }
+    //}
 
-    private static void populateWithTestData(AppDatabase db) {
-        db.recordTopicModel().deleteAll();
-
-        addRecordTopic(db, "Heslo 1", "Popis heslo 1");
-        addRecordTopic(db, "Heslo 2", "Popis heslo 2");
-        addRecordTopic(db, "Heslo 3", "Popis heslo 3");
-    }
 
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
 
@@ -64,7 +92,7 @@ public class DatabaseInitializer {
 
         @Override
         protected Void doInBackground(final Void... params) {
-            populateWithTestData(mDb);
+            //populateWithTestData(mDb);
             return null;
         }
     }
@@ -81,7 +109,7 @@ public class DatabaseInitializer {
 
         @Override
         protected Void doInBackground(final Void... params) {
-            addRecordTopic(mDb, mRecordTopic);
+            //addRecordTopic(mDb, mRecordTopic);
             return null;
         }
 

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="cz.cas.ilaw.csrlaworigin">
+    package="cz.cas.ilaw.csrlaworigin">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- <permission -->
+    <!-- android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE" -->
+    <!-- android:protectionLevel="signature"/> -->
+    <uses-permission android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:name=".MyApplication"
@@ -10,9 +22,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDAn6NwQWboUvil93mHF689HA4jRonPp3U"/>
 
         <activity
-            android:name=".mainscreen.MainActivity"
+            android:name=".loginscreen.IntroActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,15 +38,21 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".topiceditor.EntityActivity">
+        <activity android:name=".topicsscreen.TopicsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".mainscreen.MainActivity" />
+                android:value=".loginscreen.IntroActivity"/>
         </activity>
 
+        <activity android:name=".search.SearchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
 
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
     </application>
 
 </manifest>

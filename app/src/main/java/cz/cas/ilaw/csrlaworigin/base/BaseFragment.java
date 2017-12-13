@@ -1,5 +1,6 @@
 package cz.cas.ilaw.csrlaworigin.base;
 
+import android.arch.lifecycle.LifecycleFragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
@@ -12,7 +13,7 @@ import cz.cas.ilaw.csrlaworigin.MyApplication;
  *
  * @author Jiri Sereda
  */
-abstract public class BaseFragment extends Fragment {
+abstract public class BaseFragment extends LifecycleFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

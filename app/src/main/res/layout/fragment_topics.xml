@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+  <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/map"
+      android:name="com.google.android.gms.maps.SupportMapFragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+
+  <android.support.v7.widget.SearchView
+      android:id="@+id/search"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/grid_4"
+      android:layout_marginRight="@dimen/grid_4"
+      android:layout_marginTop="@dimen/grid_4"
+      app:queryHint="@string/search_hint"
+      android:background="@android:color/white"
+      />
+
+  <ListView
+      android:id="@+id/topics"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/search"
+      android:layout_marginTop="19dp"
+      android:layout_marginBottom="19dp"
+      android:layout_marginLeft="@dimen/grid_4"
+      android:layout_marginRight="@dimen/grid_4"
+      android:background="@android:color/white"
+      android:visibility="invisible"
+      />
+
+
+</RelativeLayout>

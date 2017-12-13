@@ -1,0 +1,60 @@
+
+
+
+
+
+
+
+                //public void getUser() {
+                //
+                //  new MutableLiveData<>()
+                //
+                //    Retrofit retrofit = new Retrofit.Builder()
+                //        .baseUrl("https://jsonplaceholder.typicode.com/")
+                //        .addConverterFactory(GsonConverterFactory.create())
+                //        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                //        .build();
+                //
+                //    final Webservice webservice = retrofit.create(Webservice.class);
+                //
+                //
+                //    CompositeDisposable mCompositeDisposable = new CompositeDisposable();
+                //
+                //    mCompositeDisposable.add(webservice.getUser("1")
+                //    .subscribeOn(Schedulers.io())
+                //    .observeOn(AndroidSchedulers.mainThread())
+                //    .map(new Function<UserResponse, String>() {
+                //      @Override public String apply(UserResponse userResponse) throws Exception {
+                //        return userResponse.getName();
+                //      }
+                //    })
+                //    .subscribe(new Consumer<String>() {
+                //      @Override public void accept(String s) throws Exception {
+                //        Log.d("TopicsViewModel", s);
+                //        MutableLiveData<String> data = new MutableLiveData<>();
+                //        data.setValue(s);
+                //        userId = data;
+                //      }
+                //    })
+                //    );
+                //
+                //
+                //
+                //  //webservice.getUser("1")
+                //  //      .subscribeOn(Schedulers.io())
+                //  //      .observeOn(AndroidSchedulers.mainThread())
+                //  //      .subscribe(new DisposableObserver<UserResponse>() {
+                //  //
+                //  //        @Override public void onNext(UserResponse value) {
+                //  //          Log.d("TopicsViewModel", value.getName());
+                //  //        }
+                //  //
+                //  //        @Override public void onError(Throwable e) {
+                //  //
+                //  //        }
+                //  //
+                //  //        @Override public void onComplete() {
+                //  //
+                //  //        }
+                //  //      });
+                //}

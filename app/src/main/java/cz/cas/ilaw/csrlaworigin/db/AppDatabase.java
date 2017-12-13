@@ -21,26 +21,9 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-@Database(entities = {RecordTopic.class}, version = 1)
+@Database(entities = {RecordTopic.class, User.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
 
-    private static AppDatabase INSTANCE;
-
-    public abstract RecordTopicDao recordTopicModel();
-
-    public static AppDatabase getInMemoryDatabase(Context context) {
-        if (INSTANCE == null) {
-            INSTANCE =
-                    Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "jirka.db")
-                    // To simplify the codelab, allow queries on the main thread.
-                    // Don't do this on a real app! See PersistenceBasicSample for an example.
-                    .allowMainThreadQueries()
-                    .build();
-        }
-        return INSTANCE;
-    }
-
-    public static void destroyInstance() {
-        INSTANCE = null;
-    }
+    public abstract RecordTopicDao recordTopicDao();
+    public abstract UserDao userDao();
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
+import android.util.Log;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -22,5 +23,52 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("cz.cas.ilaw.csrlaworigin", appContext.getPackageName());
+
+
     }
+
+    @Test
+    public void useTestFormat() throws Exception {
+        // Context of the app under test.
+        Context appContext = InstrumentationRegistry.getTargetContext();
+
+        assertEquals("cz.cas.ilaw.csrlaworigin", appContext.getPackageName());
+
+
+        String aaa = String.format("INSERT OR IGNORE INTO %s (%s" +  repeatString( ", %s", 12 ) + ") VALUES (?" + repeatString( ",?", 12) + ")",
+
+            "recipes_lecker",
+
+            "Id",
+            "DateCreated",
+            "DateChanged",
+            "fieldNameBrand",
+            "fieldNameCreator",
+
+            "fieldNameTitle",
+            "fieldNameTeaser",
+            "ImageTitle",
+            "fieldNameImageId",
+            "fieldNameImageCredit",
+
+            "Course",
+            "PublicationMeta",
+            "fieldNameFavorite"
+        );
+
+        Log.d("TEST", "aaa");
+
+
+    }
+
+    private static String repeatString( String pattern, int repeatTimes ){
+
+        String output = pattern;
+        for( int cnt = 1; cnt < repeatTimes; cnt++ ){
+            output += pattern;
+        }
+        return output;
+    }
+
+
 }

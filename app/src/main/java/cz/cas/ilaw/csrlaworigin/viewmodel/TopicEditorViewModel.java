@@ -39,7 +39,7 @@ public class TopicEditorViewModel extends AndroidViewModel {
     }
 
     public void createDb() {
-        mDb = AppDatabase.getInMemoryDatabase(this.getApplication());
+        //mDb = AppDatabase.getInMemoryDatabase(this.getApplication());
 
         // Populate it with initial data
 //        DatabaseInitializer.populateAsync(mDb);
@@ -54,7 +54,7 @@ public class TopicEditorViewModel extends AndroidViewModel {
 
     private void subscribeToDbChanges() {
         // Books is a LiveData object so updates are observed.
-        mRecordTopics = mDb.recordTopicModel().loadAllTopics();
+        //mRecordTopics = mDb.recordTopicModel().loadAllTopics();
     }
 
     public void saveTopic(String title, String description) {

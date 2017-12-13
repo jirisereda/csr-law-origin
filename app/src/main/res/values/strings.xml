@@ -10,19 +10,20 @@
     <string name="menu_save">save</string>
     <string name="location">location</string>
     <string name="add_linked_item">pridej souvisejici heslo</string>
+    <string name="search_hint">Look for whatever you want</string>
 
 
     <!-- Contents of the alert dialog when the user hits the Cancel button in the editor [CHAR LIMIT=128] -->
     <string name="cancel_confirmation_dialog_message">Discard changes?</string>
 
     <!-- Positive button text for the cancel editing confirmation dialog.
-      Pushing this button indicates that the user wishes to discard the changes they have already
-      made and close the editor. [CHAR LIMIT=20] -->
+        Pushing this button indicates that the user wishes to discard the changes they have already
+        made and close the editor. [CHAR LIMIT=20] -->
     <string name="cancel_confirmation_dialog_cancel_editing_button">Discard</string>
 
     <!-- Negative button text for the cancel editing confirmation dialog.
-      Pushing this button indicates that the user wishes to continue editing
-      and return to the editor [CHAR LIMIT=30] -->
+        Pushing this button indicates that the user wishes to continue editing
+        and return to the editor [CHAR LIMIT=30] -->
     <string name="cancel_confirmation_dialog_keep_editing_button">Cancel</string>
 
 </resources>
